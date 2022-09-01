@@ -968,6 +968,7 @@ nav > ul {
 > **Step 50** <br>
 Set the width of the `section` elements to `80%` of their parent container. Then, use margins to center the `section` elements, adding `10px` to the bottom margin.<br>
 Also, ensure the `section` elements cannot be larger than `600px` in width.
+
 ```css
 #styles.css
 section {
@@ -978,4 +979,247 @@ section {
 	margin-left: auto;
 	max-width: 600px;
 }
+```
+> **Step 51** <br>
+Replace the top margin of the `h2` elements with `60px` of top padding.
+
+```css
+#styles.css
+h2 {
+  border-bottom: 4px solid #dfdfe2;
+  padding-top: 60px;
+  margin-top: 0;
+}
+```
+> **Step 52** <br>
+Add padding to the top and left of the `.info` elements, and set the other values to `0`.
+
+```css
+#styles.css
+.info {
+  padding: 10px 0 0 5px;
+}
+```
+> **Step 53** <br>
+Give the `.formrow` elements top margin, and left and right padding. The other padding values should be `0`.<br>
+Then, increase the font size for all `input` elements.
+
+```css
+#styles.css
+.formrow {
+  margin-top: 30px;
+  padding: 0px 15px;
+}
+
+input {
+  font-size: 16px;
+}
+```
+> **Step 54** <br>
+To make the first section look more inline, target only the `input` elements within `.info` elements, and set their `width` to `50%`, and left-align their text.
+
+```css
+#styles.css
+.info input {
+  width: 50%;
+  text-align: left;
+}
+```
+> **Step 55** <br>
+Target all `label` elements within `.info` elements, and set their `width` to `10%`, and make it so they do not take up less than `55px`.
+
+```css
+#styles.css
+.info input {
+  width: 50%;
+  text-align: left;
+}
+
+.info label {
+  width: 10%;
+  min-width: 55px;
+}
+```
+> **Step 56** <br>
+To align the `input` boxes with each other, set the `display` property to `inline-block` for all `input` and `label` elements within `.info` elements.<br>
+Also, align the text to the right.
+
+```css
+#styles.css
+.info input, .info label {
+  display: inline-block;
+  text-align: right;
+}
+
+.info input {
+  width: 50%;
+  text-align: left;
+}
+
+.info label {
+  width: 10%;
+  min-width: 55px;
+}
+```
+> **Step 57** <br>
+To neaten the `.question-block` elements, set the following CSS properties:
+> ```css
+> text-align: left;
+> display: block;
+> width: 100%;
+> margin-top: 20px;
+> padding-top: 5px;
+> ``` 
+
+```css
+#styles.css
+.question-block {
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 5px;
+}
+```
+> **Step 58** <br>
+Make the paragraph elements appear as a higher priority, with the following CSS properties:
+> ```css
+> margin-top: 5px;
+> padding-left: 15px;
+> font-size: 20px;
+> ```
+
+```css
+#styles.css
+p {
+    margin-top: 5px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+```
+> **Step 59** <br>
+It is useful to see the default border around the `fieldset` elements, during development. However, it might not be the style you want.<br>
+Remove the border and bottom padding on the `.question` elements.
+
+```css
+#styles.css
+.question {
+  border: none;
+  padding-bottom: 0;
+}
+```
+> **Step 60** <br>
+Remove the default styling for the list items of `.answers-list`, and remove the unordered list padding.
+
+```css
+#styles.css
+.answers-list {
+  list-style: none;
+  padding: 0;
+}
+```
+> **Step 61** <br>
+Give the submit button a freeCodeCamp-style design, with the following CSS properties:
+> ```css
+> display: block;
+> margin: 40px auto;
+> width: 40%;
+> padding: 15px;
+> font-size: 23px;
+> background: #d0d0d5;
+> border: 3px solid #3b3b4f;
+> ```
+
+```css
+#styles.css
+button {
+  display: block;
+  margin: 40px auto;
+  width: 40%;
+  padding: 15px;
+  font-size: 23px;
+  background: #d0d0d5;
+  border: 3px solid #3b3b4f;
+}
+```
+> **Step 62** <br>
+Set the `footer` background color to `#2a2a40`, and use Flexbox to horizontally center the text.
+
+```css
+#styles.css
+footer {
+  background-color: #2a2a40;
+  display: flex;
+  justify-content: center;
+}
+```
+> **Step 63** <br>
+Now, we cannot read the text. Target the `footer` and the anchor element within to set the font color to a color of adequate contrast ratio.
+
+```css
+#styles.css
+footer, footer a {
+  color: #dfdfe2;
+}
+```
+> **Step 64** <br>
+Horizontally center all the text within the `address` element, and add some padding.
+
+```css
+#styles.css
+address {
+  text-align: center;
+  padding: 0.3em;
+}
+```
+> **Step 65** <br>
+Clicking on the navigation links should jump the viewport to the relevant section. However, this jumping can be disorienting for some users.<br>
+Select all elements, and set the `scroll-behavior` to `smooth`.
+
+```css
+#styles.css
+* {
+  scroll-behavior: smooth;
+}
+```
+> **Step 66** <br>
+Certain types of motion-based animations can cause discomfort for some users. In particular, people with *vestibular* disorders have sensitivity to certain motion triggers.<br>
+The `@media` at-rule has a media feature called `prefers-reduced-motion` to set CSS based on the user's preferences. It can take one of the following values:
+> - `reduce`
+> - `no-preference`
+> ```css
+> @media (feature: value) {
+>   selector {
+>     styles
+>   }
+> }
+> ```
+> Wrap the style rule that sets `scroll-behavior: smooth` within an `@media` at-rule with the media feature `prefers-reduced-motion` having `no-preference` set as the value.
+
+```css
+#styles.css
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+```
+> **Step 67** <br>
+Finally, the navigation accessibility can be improved by providing keyboard shortcuts.<br>
+The `accesskey` attribute accepts a space-separated list of access keys. For example:
+> ```html
+> <button type="submit" accesskey="s">Submit</button>
+> ```
+> Give each of the navigation links a single-letter access key.<br>
+> ***Note***: It is not always advised to use access keys, but they can be useful*
+<br>
+> Well done. You have completed the *Accessibility Quiz* practice project.
+
+```html
+#index.html
+        <ul>
+          <li><a href="#student-info" accesskey="i">INFO</a></li>
+          <li><a href="#html-questions" accesskey="h">HTML</a></li>
+          <li><a href="#css-questions" accesskey="c">CSS</a></li>
+		</ul>
 ```
