@@ -1211,8 +1211,7 @@ The `accesskey` attribute accepts a space-separated list of access keys. For exa
 > <button type="submit" accesskey="s">Submit</button>
 > ```
 > Give each of the navigation links a single-letter access key.<br>
-> ***Note***: It is not always advised to use access keys, but they can be useful*
-<br>
+> ***Note***: *It is not always advised to use access keys, but they can be useful*<br>
 > Well done. You have completed the *Accessibility Quiz* practice project.
 
 ```html
