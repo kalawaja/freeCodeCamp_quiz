@@ -1221,5 +1221,5 @@ The `accesskey` attribute accepts a space-separated list of access keys. For exa
           <li><a href="#student-info" accesskey="i">INFO</a></li>
           <li><a href="#html-questions" accesskey="h">HTML</a></li>
           <li><a href="#css-questions" accesskey="c">CSS</a></li>
-		</ul>
+	</ul>
 ```
